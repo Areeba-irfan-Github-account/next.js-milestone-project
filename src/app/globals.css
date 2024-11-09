@@ -1,0 +1,313 @@
+:root {
+  /* Primary Colors */
+  --primary: #000000;
+  --primary-light: #1a1a1a;
+  --primary-dark: #000000;
+
+  /* Accent Colors */
+  --accent: #00ff00;
+  --accent-light: #33ff33;
+  --accent-dark: #00cc00;
+
+  /* Neutral Colors */
+  --background: #0a0a0a;
+  --background-light: #1a1a1a;
+  --foreground: #ffffff;
+  --foreground-dim: #a0a0a0;
+
+  /* Additional Accent */
+  --highlight: #404040;
+
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(0, 255, 0, 0.1);
+  --shadow-md: 0 4px 6px rgba(0, 255, 0, 0.15);
+  --shadow-lg: 0 8px 16px rgba(0, 255, 0, 0.2);
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'Inter', Arial, sans-serif;
+  line-height: 1.6;
+  transition: all var(--transition-normal);
+}
+
+/* Header Styles */
+.head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary);
+  border-bottom: 1px solid var(--accent);
+  padding: 0.4rem 2.5rem;
+  box-shadow: 0 2px 10px rgba(0, 255, 0, 0.1);
+}
+
+.had {
+  font-size: 1.75rem;
+  color: var(--accent);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.had:hover {
+  transform: scale(1.05);
+  text-shadow: 0 0 15px var(--accent);
+}
+
+.hed a {
+  color: var(--foreground);
+  position: relative;
+  padding: 0.5rem 1rem;
+  overflow: hidden;
+}
+
+.hed a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--accent);
+  transition: width var(--transition-normal);
+}
+
+.hed a:hover {
+  color: var(--accent);
+  background-color: transparent;
+  transform: translateY(-2px);
+}
+
+.hed a:hover::after {
+  width: 100%;
+}
+
+/* Main Content Styles */
+.back{
+  background-color: var(--primary);
+  display: flex ;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3.5rem;
+  color: var(--foreground);
+  text-shadow: 0 0 10px var(--accent);
+  letter-spacing: 0.1em;
+  padding: 1.1rem 0;
+}
+
+.heading:hover {
+  transform: scale(1.03);
+  text-shadow: 0 0 20px var(--accent);
+}
+
+.Paragraph {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--foreground-dim);
+  font-size: 1.4rem;
+  max-width: 800px;
+  line-height: 1.8;
+  padding: 2rem;
+  background: var(--primary-light);
+  border-radius: 1rem;
+  border: 1px solid var(--highlight);
+  transition: all var(--transition-normal);
+}
+
+.Paragraph:hover {
+  border-color: var(--accent);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+.skiled{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary);
+}
+
+.shad {
+  font-size: 3.8rem;
+  color: var(--foreground);
+  text-shadow: 0 0 15px var(--accent);
+  letter-spacing: 0.15em;
+}
+
+.shad:hover {
+  transform: translateY(-5px);
+  text-shadow: 0 0 30px var(--accent);
+}
+
+/* Section Styles */
+.shead {
+  background-color: var(--background-light);
+  border: 1px solid var(--highlight);
+  border-radius: 1rem;
+  padding: 2rem;
+  margin: 2rem;
+}
+
+.shead:hover {
+  border-color: var(--accent);
+  transform: translateY(-7px);
+  box-shadow: var(--shadow-lg);
+}
+
+.sshead {
+  color: var(--accent);
+  font-size: 1.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.sshead:hover {
+  transform: scale(1.05);
+  text-shadow: 0 0 15px var(--accent);
+}
+
+.ssp {
+  background-color: var(--primary-light);
+  border: 2px solid var(--highlight);
+  border-radius: 1rem;
+  padding: 2rem;
+  margin: 1.5rem;
+  transition: all var(--transition-normal);
+}
+
+.ssp:hover {
+  border-color: var(--accent);
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+}
+
+/* Contact Form Styles */
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary);
+  border: 1px solid var(--highlight);
+  padding: 3rem;
+  border-radius: 1rem;
+  
+}
+
+                
+.contatc{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+
+}
+.contact-container:hover {
+  border-color: var(--accent);
+  transform: translateY(-7px);
+  box-shadow: 0 0 30px rgba(0, 255, 0, 0.15);
+}
+
+.contact-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--accent);
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.input-box {
+  padding: 0.6rem;
+  margin: 0.7rem;
+  background-color: var(--background);
+  border: 1px solid var(--highlight);
+  color: var(--foreground);
+  transition: all var(--transition-normal);
+}
+
+.input-box:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.2);
+}
+
+.message-box {
+  padding: 0.9rem 4rem;
+  margin: 0.7rem;
+  padding-bottom: 4rem;
+  background-color: var(--background);
+  border: 1px solid var(--highlight);
+  color: var(--foreground);
+}
+
+.message-box:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.2);
+}
+
+.submit-btn {
+  margin: 1.2rem;
+  background-color: var(--primary);
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.submit-btn:hover {
+  background-color: var(--accent);
+  color: var(--primary);
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .head {
+    padding: 1rem;
+  }
+
+  .heading {
+    font-size: 2.5rem;
+  }
+
+  .shad {
+    font-size: 3rem;
+  }
+
+  .contact-container {
+    padding: 2rem;
+    width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  .had {
+    font-size: 1.5rem;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+
+  .contact-title {
+    font-size: 2rem;
+  }
+}
